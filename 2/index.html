@@ -1,43 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 2</title>
-</head>
-
-<body>
-    <h1>Clique nos botões e veja que divertido</h1>
-    <div class="botoes">
-        <div class="fonte">
-            <h3>Cores da Fonte:</h3>
-            <button onclick="trocarCorFonte('red')">Vermelho</button>
-            <button onclick="trocarCorFonte('blue')">Azul</button>
-            <button onclick="trocarCorFonte('green')">Verde</button>
-            <button onclick="trocarCorFonte('orange')">Laranja</button>
-            <button onclick="trocarCorFonte('purple')">Roxo</button>
-        </div>
-
-        <div class="pagina">
-            <h3>Cores da Página:</h3>
-            <button onclick="trocarCorPagina('lightgrey')">Cinza Claro</button>
-            <button onclick="trocarCorPagina('lightblue')">Azul Claro</button>
-            <button onclick="trocarCorPagina('lightgreen')">Verde Claro</button>
-            <button onclick="trocarCorPagina('lightyellow')">Amarelo Claro</button>
-            <button onclick="trocarCorPagina('lightpink')">Rosa Claro</button>
-        </div>
-    </div>
-
-    <script>
-        function trocarCorFonte(cor) {
-            document.body.style.color = cor;
+    <title>Cores & Bootstrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
         }
 
-        function trocarCorPagina(cor) {
-            document.body.style.backgroundColor = cor;
+        .btn-pink {
+            color: #fff;
+            background-color: #FF69B4; /* Pink */
+        }
+
+        .btn-purple {
+            background-color: #6A5ACD; /* Slate Blue */
+            color: #fff;
+        }
+        
+        h2 {
+            margin: 30px;
+            color: #2F4F4F; /* Dark Slate Gray */
+        }
+    </style>
+    <script>
+        function changeColorText(color) {
+            document.body.style.color = color;
+        }
+
+        function changeBottomColor(color) {
+            document.body.style.backgroundColor = color;
         }
     </script>
-</body>
+</head>
+<body>
+    <h1>Escolha uma cor!</h1>
 
+    <h2>Cores para o texto:</h2>
+    <button class="btn btn-danger" onclick="changeColorText('red')">Vermelho</button>
+    <button class="btn btn-success" onclick="changeColorText('forestgreen')">Verde Floresta</button>
+    <button class="btn btn-primary" onclick="changeColorText('dodgerblue')">Azul Dodger</button>
+    <button class="btn btn-warning" onclick="changeColorText('gold')">Dourado</button>
+    <button class="btn btn-purple" onclick="changeColorText('indigo')">Índigo</button>
+
+    <h2>Cores para o fundo:</h2>
+    <button class="btn btn-light" onclick="changeBottomColor('lavender')">Lavanda</button>
+    <button class="btn btn-info" onclick="changeBottomColor('skyblue')">Azul Céu</button>
+    <button class="btn btn-success" onclick="changeBottomColor('palegreen')">Verde Pálido</button>
+    <button class="btn btn-warning" onclick="changeBottomColor('khaki')">Caqui</button>
+    <button class="btn btn-pink" onclick="changeBottomColor('lightcoral')">Coral Claro</button>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>
